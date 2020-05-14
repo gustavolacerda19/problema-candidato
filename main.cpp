@@ -40,5 +40,22 @@ int main()
     cout << endl << "Pontos por escolaridade: " << pontosEscolaridade << endl;
     cout << "Pontos por experiencia: " << pontosExperiencia << endl;
 
+    cout << endl << "Voce esta habilitado para o(s) seguinte(s) cargo(s):" << endl;
+
+    if (escolaridade<2) {
+        cout << "Infelizmente seu perfil nao atende a empresa" << endl;
+    }
+    else {
+        if (escolaridade>=2 && habilitacao=="S") {
+            cout << "ASSISTENTE" << endl;
+        }
+        if (escolaridade>=3 && experiencia>2) {
+            cout << "GERENTE" << endl;
+        }
+        if (escolaridade>=3 && experiencia>5 && viajar=="S") {
+            cout << "ANALISTA" << endl;
+        }
+    }
+
     return 0;
 }
