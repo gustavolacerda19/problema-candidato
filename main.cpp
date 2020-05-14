@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int escolaridade, experiencia;
+    int escolaridade, experiencia, pontosEscolaridade, pontosExperiencia;
     string viajar, habilitacao;
 
     cout << "Qual sua escolaridade?" << endl;
@@ -15,12 +15,30 @@ int main()
     cout << "Digite uma opcao: ";
     cin >> escolaridade;
 
-    cout << "Voce tem quantos anos de experiencia profissional? ";
+    cout << endl << "Voce tem quantos anos de experiencia profissional? ";
     cin >> experiencia;
     cout << "Voce tem disponibilidade para viajar (S/N)? ";
     cin >> viajar;
     cout << "Voce tem habilitacao de motorista (S/N)? ";
     cin >> habilitacao;
+
+    pontosEscolaridade = escolaridade*10;
+
+    if (experiencia == 0) {
+        pontosExperiencia = 0;
+    }
+    else if (experiencia <= 2) {
+        pontosExperiencia = 10;
+    }
+    else if (experiencia <= 5) {
+        pontosExperiencia = 20;
+    }
+    else {
+        pontosExperiencia = 40;
+    }
+
+    cout << endl << "Pontos por escolaridade: " << pontosEscolaridade << endl;
+    cout << "Pontos por experiencia: " << pontosExperiencia << endl;
 
     return 0;
 }
